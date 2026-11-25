@@ -1,0 +1,59 @@
+{
+  "Reentrancy": {
+    "run_info": {
+      "slither": {
+        "tool": "slither",
+        "seconds": 0.379,
+        "solc": "/root/.solc-select/artifacts/solc-0.4.26/solc-0.4.26",
+        "returncode": 255,
+        "n_detectors_raw": 6,
+        "n_findings": 3
+      },
+      "smartcheck": {
+        "tool": "smartcheck",
+        "seconds": 1.121,
+        "returncode": 0,
+        "n_findings": 2
+      }
+    },
+    "errors": {}
+  },
+  "UncheckedCall": {
+    "run_info": {
+      "slither": {
+        "tool": "slither",
+        "seconds": 0.383,
+        "solc": "/root/.solc-select/artifacts/solc-0.4.26/solc-0.4.26",
+        "returncode": 255,
+        "n_detectors_raw": 8,
+        "n_findings": 4
+      },
+      "smartcheck": {
+        "tool": "smartcheck",
+        "seconds": 1.047,
+        "returncode": 0,
+        "n_findings": 2
+      }
+    },
+    "errors": {}
+  },
+  "TxOrigin": {
+    "run_info": {
+      "slither": {
+        "tool": "slither",
+        "seconds": 0.391,
+        "solc": "/root/.solc-select/artifacts/solc-0.4.26/solc-0.4.26",
+        "returncode": 255,
+        "n_detectors_raw": 5,
+        "n_findings": 2
+      },
+      "smartcheck": {
+        "tool": "smartcheck",
+        "seconds": 1.028,
+        "returncode": 0,
+        "n_findings": 1
+      }
+    },
+    "errors": {}
+  }
+}

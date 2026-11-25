@@ -1,0 +1,5 @@
+# Celery worker: runs the detection engines. Built on the tools base image.
+FROM vulnscan-tools:latest
+
+WORKDIR /app/services/orchestration
+CMD ["celery", "-A", "config", "worker", "--loglevel=info", "--concurrency=2"]

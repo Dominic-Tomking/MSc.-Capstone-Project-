@@ -1,0 +1,250 @@
+{
+  "strict": {
+    "slither": {
+      "method": "slither",
+      "mode": "strict",
+      "micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.9091,
+        "support": 5
+      },
+      "macro": {
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.8889,
+        "n_types": 3
+      },
+      "coverage": 0.3333,
+      "partial_matches": 0,
+      "per_type": {
+        "reentrancy": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "access_control": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 1
+        },
+        "unchecked_calls": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      },
+      "confusion": {
+        "access_control": {
+          "access_control": 1
+        },
+        "unchecked_calls": {
+          "unchecked_calls": 3
+        },
+        "reentrancy": {
+          "reentrancy": 1
+        }
+      }
+    },
+    "smartcheck": {
+      "method": "smartcheck",
+      "mode": "strict",
+      "micro": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "macro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "n_types": 3
+      },
+      "coverage": 0.3333,
+      "partial_matches": 0,
+      "per_type": {
+        "reentrancy": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "access_control": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "unchecked_calls": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      },
+      "confusion": {
+        "access_control": {
+          "access_control": 1
+        },
+        "unchecked_calls": {
+          "unchecked_calls": 3
+        },
+        "reentrancy": {
+          "reentrancy": 1
+        }
+      }
+    }
+  },
+  "lenient": {
+    "slither": {
+      "method": "slither",
+      "mode": "lenient",
+      "micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.9091,
+        "support": 5
+      },
+      "macro": {
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.8889,
+        "n_types": 3
+      },
+      "coverage": 0.3333,
+      "partial_matches": 0,
+      "per_type": {
+        "reentrancy": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "access_control": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 1
+        },
+        "unchecked_calls": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      },
+      "confusion": {
+        "access_control": {
+          "access_control": 1
+        },
+        "unchecked_calls": {
+          "unchecked_calls": 3
+        },
+        "reentrancy": {
+          "reentrancy": 1
+        }
+      }
+    },
+    "smartcheck": {
+      "method": "smartcheck",
+      "mode": "lenient",
+      "micro": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "macro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "n_types": 3
+      },
+      "coverage": 0.3333,
+      "partial_matches": 0,
+      "per_type": {
+        "reentrancy": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "access_control": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "unchecked_calls": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      },
+      "confusion": {
+        "access_control": {
+          "access_control": 1
+        },
+        "unchecked_calls": {
+          "unchecked_calls": 3
+        },
+        "reentrancy": {
+          "reentrancy": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# Core analysis + orchestration (main environment / worker + web)
+slither-analyzer==0.11.6
+# web3 7.x is required by slither; the testnet EVM stack (web3<7 + eth-tester)
+# lives in a SEPARATE virtualenv (see requirements-testnet.txt) to avoid a clash.
+Django>=5.0,<5.2
+djangorestframework>=3.15
+celery>=5.3
+redis>=5.0
+requests>=2.31
+psycopg2-binary>=2.9
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6

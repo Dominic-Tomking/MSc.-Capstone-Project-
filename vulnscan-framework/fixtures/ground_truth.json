@@ -1,0 +1,65 @@
+{
+  "dataset": "vulnscan-sample",
+  "description": "Small illustrative ground-truth label set for the sample contracts. In the full study this file holds the 50-70 curated contracts with evidence citations (proposal S4.3).",
+  "contracts": [
+    {
+      "contract_id": "Reentrancy",
+      "path": "contracts_samples/Reentrancy.sol",
+      "labels": [
+        {
+          "vuln_type": "reentrancy",
+          "severity": "critical",
+          "function": "withdraw",
+          "start_line": 11,
+          "end_line": 18,
+          "evidence_ref": "SWC-107; DAO-style external call before state update",
+          "note": "call.value before balance decrement"
+        },
+        {
+          "vuln_type": "unchecked_calls",
+          "severity": "medium",
+          "function": "withdraw",
+          "start_line": 15,
+          "end_line": 15,
+          "evidence_ref": "SWC-104; low-level call return value ignored"
+        }
+      ]
+    },
+    {
+      "contract_id": "UncheckedCall",
+      "path": "contracts_samples/UncheckedCall.sol",
+      "labels": [
+        {
+          "vuln_type": "unchecked_calls",
+          "severity": "medium",
+          "function": "ping",
+          "start_line": 6,
+          "end_line": 8,
+          "evidence_ref": "SWC-104; return value of call ignored"
+        },
+        {
+          "vuln_type": "unchecked_calls",
+          "severity": "medium",
+          "function": "sendFunds",
+          "start_line": 9,
+          "end_line": 11,
+          "evidence_ref": "SWC-104; return value of send ignored"
+        }
+      ]
+    },
+    {
+      "contract_id": "TxOrigin",
+      "path": "contracts_samples/TxOrigin.sol",
+      "labels": [
+        {
+          "vuln_type": "access_control",
+          "severity": "high",
+          "function": "transferTo",
+          "start_line": 8,
+          "end_line": 11,
+          "evidence_ref": "SWC-115; tx.origin used for authorization"
+        }
+      ]
+    }
+  ]
+}

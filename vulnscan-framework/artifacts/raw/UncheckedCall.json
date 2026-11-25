@@ -1,0 +1,164 @@
+[
+  {
+    "contract_id": "UncheckedCall",
+    "vuln_type": "access_control",
+    "severity": "critical",
+    "location": {
+      "function": "sendFunds",
+      "start_line": 9,
+      "end_line": 11,
+      "file": "contracts_samples/UncheckedCall.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "522faea40e4195b978ada747469656a20b64557675ad1d2f112a1111baf943ab",
+    "raw_type": "arbitrary-send-eth",
+    "message": "UncheckedCall.sendFunds(address,uint256) (contracts_samples/UncheckedCall.sol#9-11) sends eth to arbitrary user",
+    "metadata": {
+      "impact": "high",
+      "confidence_label": "medium"
+    },
+    "swc": [
+      "SWC-105",
+      "SWC-106",
+      "SWC-115"
+    ],
+    "cwe": [
+      "CWE-284",
+      "CWE-269"
+    ]
+  },
+  {
+    "contract_id": "UncheckedCall",
+    "vuln_type": "unchecked_calls",
+    "severity": "medium",
+    "location": {
+      "function": "ping",
+      "start_line": 6,
+      "end_line": 8,
+      "file": "contracts_samples/UncheckedCall.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "996f28f363e8217c0c92d313994d25b6458ad0884e4419a97697dd77bad2b585",
+    "raw_type": "unchecked-lowlevel",
+    "message": "UncheckedCall.ping(address) (contracts_samples/UncheckedCall.sol#6-8) ignores return value by dst.call(bytes4(keccak256()(ping()))) (contracts_samples/UncheckedCall.sol#7)",
+    "metadata": {
+      "impact": "medium",
+      "confidence_label": "medium"
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  },
+  {
+    "contract_id": "UncheckedCall",
+    "vuln_type": "unchecked_calls",
+    "severity": "medium",
+    "location": {
+      "function": "sendFunds",
+      "start_line": 9,
+      "end_line": 11,
+      "file": "contracts_samples/UncheckedCall.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "e656b1413c487f597ee8ba0d33ac29cce3e8a6904f605260e8d9f0954993fa9c",
+    "raw_type": "unchecked-send",
+    "message": "UncheckedCall.sendFunds(address,uint256) (contracts_samples/UncheckedCall.sol#9-11) ignores return value by dst.send(amount) (contracts_samples/UncheckedCall.sol#10)",
+    "metadata": {
+      "impact": "medium",
+      "confidence_label": "medium"
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  },
+  {
+    "contract_id": "UncheckedCall",
+    "vuln_type": "unchecked_calls",
+    "severity": "low",
+    "location": {
+      "function": "ping",
+      "start_line": 6,
+      "end_line": 8,
+      "file": "contracts_samples/UncheckedCall.sol"
+    },
+    "source": "slither",
+    "confidence": 0.9,
+    "evidence_ref": "381ed4169891c103b5e8319c52c3b791b1bc029efadc1e6e5972a3061637fe05",
+    "raw_type": "low-level-calls",
+    "message": "Low level call in UncheckedCall.ping(address) (contracts_samples/UncheckedCall.sol#6-8):",
+    "metadata": {
+      "impact": "informational",
+      "confidence_label": "high",
+      "collapsed_duplicates": 2
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  },
+  {
+    "contract_id": "UncheckedCall",
+    "vuln_type": "unchecked_calls",
+    "severity": "high",
+    "location": {
+      "function": null,
+      "start_line": 7,
+      "end_line": 7,
+      "file": null
+    },
+    "source": "smartcheck",
+    "confidence": 0.7,
+    "evidence_ref": "SOLIDITY_UNCHECKED_CALL:f39eed",
+    "raw_type": "SOLIDITY_UNCHECKED_CALL",
+    "message": "call(bytes4(keccak256(\"ping()\")))",
+    "metadata": {
+      "patternId": "f39eed",
+      "column": 12,
+      "raw_severity": 3
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  },
+  {
+    "contract_id": "UncheckedCall",
+    "vuln_type": "unchecked_calls",
+    "severity": "high",
+    "location": {
+      "function": null,
+      "start_line": 10,
+      "end_line": 10,
+      "file": null
+    },
+    "source": "smartcheck",
+    "confidence": 0.7,
+    "evidence_ref": "SOLIDITY_UNCHECKED_CALL:f39eed",
+    "raw_type": "SOLIDITY_UNCHECKED_CALL",
+    "message": "send(amount)",
+    "metadata": {
+      "patternId": "f39eed",
+      "column": 12,
+      "raw_severity": 3
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+# Static-analysis microservice (Slither + SmartCheck) on the tools base image.
+FROM vulnscan-tools:latest
+
+WORKDIR /app
+EXPOSE 8100
+CMD ["uvicorn", "services.static_analysis_service.app:app", "--host", "0.0.0.0", "--port", "8100"]

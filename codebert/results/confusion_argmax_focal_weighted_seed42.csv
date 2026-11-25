@@ -1,0 +1,12 @@
+,benign,access_control,arithmetic,bad_randomness,denial_of_service,front_running,other,reentrancy,short_addresses,time_manipulation,unchecked_low_level_calls
+benign,501,176,39,33,10,7,19,6,3,9,18
+access_control,11,6,2,0,0,1,0,0,0,0,1
+arithmetic,2,2,16,0,0,0,0,0,1,0,0
+bad_randomness,2,0,0,5,2,0,1,0,0,1,0
+denial_of_service,3,0,0,0,1,0,0,0,0,2,0
+front_running,3,0,0,0,0,0,0,0,0,0,2
+other,2,0,0,1,0,0,0,0,0,0,0
+reentrancy,1,1,1,0,0,0,0,21,0,0,7
+short_addresses,0,0,1,0,0,0,0,0,0,0,0
+time_manipulation,3,0,0,1,0,0,0,0,0,2,0
+unchecked_low_level_calls,13,6,1,1,1,0,1,4,0,0,40

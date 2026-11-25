@@ -1,0 +1,135 @@
+[
+  {
+    "contract_id": "Reentrancy",
+    "vuln_type": "reentrancy",
+    "severity": "critical",
+    "location": {
+      "function": "withdraw",
+      "start_line": 12,
+      "end_line": 17,
+      "file": "contracts_samples/Reentrancy.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "5c188d162a955ff3e0d101982899994c3f26872fa38caf4fd180cdff3ffb6c17",
+    "raw_type": "reentrancy-eth",
+    "message": "Reentrancy in Reentrancy.withdraw(uint256) (contracts_samples/Reentrancy.sol#12-17):",
+    "metadata": {
+      "impact": "high",
+      "confidence_label": "medium"
+    },
+    "swc": [
+      "SWC-107"
+    ],
+    "cwe": [
+      "CWE-841"
+    ]
+  },
+  {
+    "contract_id": "Reentrancy",
+    "vuln_type": "unchecked_calls",
+    "severity": "medium",
+    "location": {
+      "function": "withdraw",
+      "start_line": 12,
+      "end_line": 17,
+      "file": "contracts_samples/Reentrancy.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "fb133c21f99707435e087673be8c2b71e087740ca1b0d54478adfb58326a62b0",
+    "raw_type": "unchecked-lowlevel",
+    "message": "Reentrancy.withdraw(uint256) (contracts_samples/Reentrancy.sol#12-17) ignores return value by msg.sender.call.value(_amount)() (contracts_samples/Reentrancy.sol#15)",
+    "metadata": {
+      "impact": "medium",
+      "confidence_label": "medium"
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  },
+  {
+    "contract_id": "Reentrancy",
+    "vuln_type": "unchecked_calls",
+    "severity": "low",
+    "location": {
+      "function": "withdraw",
+      "start_line": 12,
+      "end_line": 17,
+      "file": "contracts_samples/Reentrancy.sol"
+    },
+    "source": "slither",
+    "confidence": 0.9,
+    "evidence_ref": "108e0e296b399791c8d668ce46ea3e15c123e89f5f6fc94a95699a97d59b2d8b",
+    "raw_type": "low-level-calls",
+    "message": "Low level call in Reentrancy.withdraw(uint256) (contracts_samples/Reentrancy.sol#12-17):",
+    "metadata": {
+      "impact": "informational",
+      "confidence_label": "high",
+      "collapsed_duplicates": 2
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  },
+  {
+    "contract_id": "Reentrancy",
+    "vuln_type": "reentrancy",
+    "severity": "medium",
+    "location": {
+      "function": null,
+      "start_line": 15,
+      "end_line": 15,
+      "file": null
+    },
+    "source": "smartcheck",
+    "confidence": 0.7,
+    "evidence_ref": "SOLIDITY_CALL_WITHOUT_DATA:om991k",
+    "raw_type": "SOLIDITY_CALL_WITHOUT_DATA",
+    "message": "call.value(_amount)()",
+    "metadata": {
+      "patternId": "om991k",
+      "column": 19,
+      "raw_severity": 2
+    },
+    "swc": [
+      "SWC-107"
+    ],
+    "cwe": [
+      "CWE-841"
+    ]
+  },
+  {
+    "contract_id": "Reentrancy",
+    "vuln_type": "unchecked_calls",
+    "severity": "high",
+    "location": {
+      "function": null,
+      "start_line": 15,
+      "end_line": 15,
+      "file": null
+    },
+    "source": "smartcheck",
+    "confidence": 0.7,
+    "evidence_ref": "SOLIDITY_UNCHECKED_CALL:f39eed",
+    "raw_type": "SOLIDITY_UNCHECKED_CALL",
+    "message": "call.value(_amount)()",
+    "metadata": {
+      "patternId": "f39eed",
+      "column": 19,
+      "raw_severity": 3
+    },
+    "swc": [
+      "SWC-104"
+    ],
+    "cwe": [
+      "CWE-252"
+    ]
+  }
+]

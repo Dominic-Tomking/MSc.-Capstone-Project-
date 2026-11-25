@@ -1,0 +1,4 @@
+# Isolated EVM stack for the testnet worker (installed into its own virtualenv).
+# web3<7 is required by eth-tester; kept apart from Slither's web3>=7.10.
+web3<7
+eth-tester[py-evm]>=0.11.0

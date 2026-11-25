@@ -1,0 +1,6 @@
+# Testnet validation microservice (EVM exploit simulation) on the tools base.
+FROM vulnscan-tools:latest
+
+WORKDIR /app
+EXPOSE 8200
+CMD ["uvicorn", "services.testnet_service.app:app", "--host", "0.0.0.0", "--port", "8200"]

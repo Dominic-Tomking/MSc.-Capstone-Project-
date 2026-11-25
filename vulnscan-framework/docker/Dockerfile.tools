@@ -1,0 +1,37 @@
+# Base image: Python + Node + Java 8 + Slither + SmartCheck + solc versions.
+# Shared by the Celery worker and the static-analysis / testnet microservices.
+FROM python:3.11-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PATH="/usr/local/bin:${PATH}"
+
+# System deps: Java 8 (for SmartCheck's JAXB-era jar), Node (Hardhat), wget, git.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget curl git ca-certificates gnupg openjdk-8-jre-headless \
+    && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y --no-install-recommends nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python analysis stack (Slither pulls web3>=7.10).
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# solc versions for Slither (per-contract selection).
+COPY docker/install_solc.sh /tmp/install_solc.sh
+RUN bash /tmp/install_solc.sh
+
+# SmartCheck (Java tool distributed via npm).
+RUN npm install -g @smartdec/smartcheck
+
+# Isolated EVM virtualenv for the testnet worker (web3<7 + eth-tester).
+COPY requirements-testnet.txt /tmp/requirements-testnet.txt
+RUN python -m venv /opt/venv-testnet \
+    && /opt/venv-testnet/bin/pip install --no-cache-dir -r /tmp/requirements-testnet.txt
+
+ENV TESTNET_PYTHON=/opt/venv-testnet/bin/python \
+    SMARTCHECK_JAVA=/usr/lib/jvm/java-8-openjdk-amd64/bin/java \
+    TESTNET_SOLC=/root/.solc-select/artifacts/solc-0.8.19/solc-0.8.19
+
+WORKDIR /app
+COPY . /app
+ENV PYTHONPATH=/app

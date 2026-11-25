@@ -1,0 +1,91 @@
+[
+  {
+    "contract_id": "TxOrigin",
+    "vuln_type": "access_control",
+    "severity": "critical",
+    "location": {
+      "function": "transferTo",
+      "start_line": 8,
+      "end_line": 11,
+      "file": "contracts_samples/TxOrigin.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "8884474cc9c5e7703c5e2b5c4750334ef403ed515a2947ade85c6eb5fa22d136",
+    "raw_type": "arbitrary-send-eth",
+    "message": "TxOrigin.transferTo(address,uint256) (contracts_samples/TxOrigin.sol#8-11) sends eth to arbitrary user",
+    "metadata": {
+      "impact": "high",
+      "confidence_label": "medium",
+      "collapsed_duplicates": 2
+    },
+    "swc": [
+      "SWC-105",
+      "SWC-106",
+      "SWC-115"
+    ],
+    "cwe": [
+      "CWE-284",
+      "CWE-269"
+    ]
+  },
+  {
+    "contract_id": "TxOrigin",
+    "vuln_type": "access_control",
+    "severity": "critical",
+    "location": {
+      "function": "transferTo",
+      "start_line": 8,
+      "end_line": 11,
+      "file": "contracts_samples/TxOrigin.sol"
+    },
+    "source": "slither",
+    "confidence": 0.6,
+    "evidence_ref": "e8c6807f6fec27bef46665f868b9c5da24d24799b1e1e34195d9d967e049cc49",
+    "raw_type": "tx-origin",
+    "message": "TxOrigin.transferTo(address,uint256) (contracts_samples/TxOrigin.sol#8-11) uses tx.origin for authorization: require(bool)(tx.origin == owner) (contracts_samples/TxOrigin.sol#9)",
+    "metadata": {
+      "impact": "medium",
+      "confidence_label": "medium"
+    },
+    "swc": [
+      "SWC-105",
+      "SWC-106",
+      "SWC-115"
+    ],
+    "cwe": [
+      "CWE-284",
+      "CWE-269"
+    ]
+  },
+  {
+    "contract_id": "TxOrigin",
+    "vuln_type": "access_control",
+    "severity": "medium",
+    "location": {
+      "function": null,
+      "start_line": 9,
+      "end_line": 9,
+      "file": null
+    },
+    "source": "smartcheck",
+    "confidence": 0.7,
+    "evidence_ref": "SOLIDITY_TX_ORIGIN:12e802",
+    "raw_type": "SOLIDITY_TX_ORIGIN",
+    "message": "tx.origin",
+    "metadata": {
+      "patternId": "12e802",
+      "column": 16,
+      "raw_severity": 2
+    },
+    "swc": [
+      "SWC-105",
+      "SWC-106",
+      "SWC-115"
+    ],
+    "cwe": [
+      "CWE-284",
+      "CWE-269"
+    ]
+  }
+]

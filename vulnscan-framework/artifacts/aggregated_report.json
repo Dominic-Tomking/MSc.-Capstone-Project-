@@ -1,0 +1,136 @@
+{
+  "Reentrancy": {
+    "contract_id": "Reentrancy",
+    "n_clusters": 1,
+    "n_consensus": 1,
+    "n_conflicts": 0,
+    "findings": [
+      {
+        "contract_id": "Reentrancy",
+        "vuln_type": "reentrancy",
+        "severity": "critical",
+        "location": {
+          "function": "withdraw",
+          "start_line": 12,
+          "end_line": 17
+        },
+        "methods": [
+          "slither",
+          "smartcheck"
+        ],
+        "n_methods": 2,
+        "consensus": true,
+        "risk_score": 0.915,
+        "max_confidence": 0.9,
+        "evidence": [
+          "5c188d162a955ff3e0d101982899994c3f26872fa38caf4fd180cdff3ffb6c17",
+          "108e0e296b399791c8d668ce46ea3e15c123e89f5f6fc94a95699a97d59b2d8b",
+          "SOLIDITY_CALL_WITHOUT_DATA:om991k",
+          "SOLIDITY_UNCHECKED_CALL:f39eed"
+        ]
+      }
+    ]
+  },
+  "UncheckedCall": {
+    "contract_id": "UncheckedCall",
+    "n_clusters": 3,
+    "n_consensus": 2,
+    "n_conflicts": 1,
+    "findings": [
+      {
+        "contract_id": "UncheckedCall",
+        "vuln_type": "unchecked_calls",
+        "severity": "high",
+        "location": {
+          "function": "ping",
+          "start_line": 6,
+          "end_line": 8
+        },
+        "methods": [
+          "slither",
+          "smartcheck"
+        ],
+        "n_methods": 2,
+        "consensus": true,
+        "risk_score": 0.8025,
+        "max_confidence": 0.9,
+        "evidence": [
+          "381ed4169891c103b5e8319c52c3b791b1bc029efadc1e6e5972a3061637fe05",
+          "SOLIDITY_UNCHECKED_CALL:f39eed"
+        ]
+      },
+      {
+        "contract_id": "UncheckedCall",
+        "vuln_type": "access_control",
+        "severity": "critical",
+        "location": {
+          "function": "sendFunds",
+          "start_line": 9,
+          "end_line": 11
+        },
+        "methods": [
+          "slither"
+        ],
+        "n_methods": 1,
+        "consensus": false,
+        "risk_score": 0.76,
+        "max_confidence": 0.6,
+        "evidence": [
+          "522faea40e4195b978ada747469656a20b64557675ad1d2f112a1111baf943ab"
+        ]
+      },
+      {
+        "contract_id": "UncheckedCall",
+        "vuln_type": "unchecked_calls",
+        "severity": "high",
+        "location": {
+          "function": "sendFunds",
+          "start_line": 9,
+          "end_line": 11
+        },
+        "methods": [
+          "slither",
+          "smartcheck"
+        ],
+        "n_methods": 2,
+        "consensus": true,
+        "risk_score": 0.7325,
+        "max_confidence": 0.7,
+        "evidence": [
+          "e656b1413c487f597ee8ba0d33ac29cce3e8a6904f605260e8d9f0954993fa9c",
+          "SOLIDITY_UNCHECKED_CALL:f39eed"
+        ]
+      }
+    ]
+  },
+  "TxOrigin": {
+    "contract_id": "TxOrigin",
+    "n_clusters": 1,
+    "n_consensus": 1,
+    "n_conflicts": 0,
+    "findings": [
+      {
+        "contract_id": "TxOrigin",
+        "vuln_type": "access_control",
+        "severity": "critical",
+        "location": {
+          "function": "transferTo",
+          "start_line": 8,
+          "end_line": 11
+        },
+        "methods": [
+          "slither",
+          "smartcheck"
+        ],
+        "n_methods": 2,
+        "consensus": true,
+        "risk_score": 0.845,
+        "max_confidence": 0.7,
+        "evidence": [
+          "8884474cc9c5e7703c5e2b5c4750334ef403ed515a2947ade85c6eb5fa22d136",
+          "SOLIDITY_TX_ORIGIN:12e802"
+        ]
+      }
+    ]
+  }
+}
